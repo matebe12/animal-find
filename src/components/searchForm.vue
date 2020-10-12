@@ -1,5 +1,5 @@
 <template>
-  <form action="">
+  <form action="" @submit.prevent="getAnimalsList()">
     <select name="" id="">
       <option value="1">전체</option>
       <option value="2">강아지</option>
@@ -31,7 +31,8 @@ export default {
           SHTER_NM: '',
         };
         const result = await getAnimals(reqData);
-        console.log(result);
+        this.$store.commit('getAnimalsList', result.data.AbdmAnimalProtect);
+        console.log(result.data.AbdmAnimalProtect);
       } catch (error) {
         console.error(error);
       }
