@@ -5,17 +5,6 @@
         <li :class="{ active: $route.path == '/' }">
           <router-link to="/">유기 동물 보호 현황</router-link>
         </li>
-        <li :class="{ active: $route.path == '/place' }">
-          <router-link to="/satong">보호 장소 검색</router-link>
-        </li>
-      </ul>
-      <ul>
-        <li :class="{ active: $route.path == '/' }">
-          <router-link to="/">로그인</router-link>
-        </li>
-        <li :class="{ active: $route.path == '/place' }">
-          <router-link to="/satong">회원가입</router-link>
-        </li>
       </ul>
     </nav>
   </div>
@@ -57,5 +46,8 @@ export default {};
 }
 .active {
   border-bottom: solid 1px white;
+}
+.container {
+  margin-bottom: 1%;
 }
 </style>
