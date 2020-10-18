@@ -20,7 +20,6 @@ const routes = [
     name: 'animalList',
     component: AnimaList,
     beforeEnter: async (to, from, next) => {
-      console.log(to, from);
       const reqData = {
         pIndex: 1,
         SIGUN_NM: to.query.SIGUN_NM,
@@ -42,7 +41,6 @@ const routes = [
     name: 'viewAnimalInfo',
     component: viewAnimalInfo,
     beforeEnter: (to, from, next) => {
-      console.log(to, from);
       next();
     },
   },

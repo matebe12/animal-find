@@ -39,7 +39,6 @@ export default {
     let input = document.getElementById('SIGN_NM');
     input.addEventListener('keydown', event => {
       let div = document.getElementsByClassName('list');
-      console.log(event);
       if(event.keyCode === 40){
         currentIndex++;
         event.preventDefault();// 아래면 이벤트를 멈춘다.
@@ -69,16 +68,13 @@ export default {
     const removeClassName = (div) => {
       let length = div.length;
       for(let i = 0; i < length; i++){
-        console.log(i+'번째 지움');
         div[i].classList.remove('active'); // active를 지운다.
       }
     };
 
     const selectSIGUN = (div) => {
       if(div.length > 0){
-        console.log(div[currentIndex].childNodes[1]);
         this.SIGUN_NM = div[currentIndex].childNodes[1].value;
-        console.log(this.SIGUN_NM);
         removeClass(div);
       }
       
@@ -122,7 +118,6 @@ export default {
     },
     getSigun(e) {
       let name = e.target.value;
-      console.log(name);
       if (name !== '') {
         this.SIGUN = sigun.filter(x => x.includes(name)).filter((y,i) => i < 5);
         }
